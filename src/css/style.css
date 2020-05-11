@@ -1,0 +1,53 @@
+body {
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+  
+.calculadora {
+  background-color: #ddd;
+  width: 300px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 60px;
+  grid-gap: 1px;
+  border: solid 1px black;
+  margin: 0 auto;
+}
+
+.calculadora > * {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s;
+}
+
+.calculadora > *:hover:not(.tela) {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.tela {
+  grid-column: span 4;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.igual {
+  grid-row: 3 / span 4;
+  grid-column-start: 4;
+}
+
+.historico {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.historico h2 {
+  text-align: center;
+}

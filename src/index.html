@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Javascript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/utils.js"></script>
+    <script src="js/Calculadora.js"></script>
+</head>
+<body>
+    <main class="calculadora">
+        <input type="text" class="tela" id="tela" onclick="somente_numeros(event, value)" />
+  
+        <div class="adicao" onclick="adiciona_simbolo('+')">+</div>
+        <div class="subtracao" onclick="adiciona_simbolo('-')">-</div>
+        <div class="multiplicacao" onclick="adiciona_simbolo('*')">*</div>
+        <div class="divisao" onclick="adiciona_simbolo('/')">/</div>
+  
+        <div class="numero" onclick="adiciona_simbolo('7')">7</div>
+        <div class="numero" onclick="adiciona_simbolo('8')">8</div>
+        <div class="numero" onclick="adiciona_simbolo('9')">9</div>
+        <div class="numero" onclick="adiciona_simbolo('4')">4</div>
+        <div class="numero" onclick="adiciona_simbolo('5')">5</div>
+        <div class="numero" onclick="adiciona_simbolo('6')">6</div>
+        <div class="numero" onclick="adiciona_simbolo('1')">1</div>
+        <div class="numero" onclick="adiciona_simbolo('2')">2</div>
+        <div class="numero" onclick="adiciona_simbolo('3')">3</div>
+        <div class="numero" onclick="adiciona_simbolo('0')">0</div>
+  
+        <div class="ponto" onclick="adiciona_simbolo('.')">.</div>
+        <div class="limpar" onclick="limpar_formula()">C</div>
+        <div class="igual" onclick="calcular_formula()">=</div>
+      </main>
+      <div class="historico">
+          <h2>Histórico</h2>
+          <div id="historico"></div>
+      </div>
+
+    </div>
+</body>
+</html>
+
