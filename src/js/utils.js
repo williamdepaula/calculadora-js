@@ -44,7 +44,10 @@ function calcular_formula() {
     }
 }
 
-function somente_numeros(event, value) {
-    console.log(event);
-    console.log(value);
+function somente_numeros(event) {
+    var chr = String.fromCharCode(event.which);
+
+    if( !chr.match(/^[0-9+\-*/(). ]*$/) ) {
+        event.preventDefault();
+    }
 }
