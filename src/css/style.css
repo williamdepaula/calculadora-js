@@ -39,7 +39,7 @@ body {
 }
 
 .igual {
-  grid-row: 3 / span 4;
+  grid-row: 5 / span 2;
   grid-column-start: 4;
 }
 

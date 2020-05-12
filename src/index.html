@@ -20,9 +20,11 @@
         <div class="numero" onclick="adiciona_simbolo('7')">7</div>
         <div class="numero" onclick="adiciona_simbolo('8')">8</div>
         <div class="numero" onclick="adiciona_simbolo('9')">9</div>
+        <div class="numero" onclick="adiciona_simbolo('(')">(</div>
         <div class="numero" onclick="adiciona_simbolo('4')">4</div>
         <div class="numero" onclick="adiciona_simbolo('5')">5</div>
         <div class="numero" onclick="adiciona_simbolo('6')">6</div>
+        <div class="numero" onclick="adiciona_simbolo(')')">)</div>
         <div class="numero" onclick="adiciona_simbolo('1')">1</div>
         <div class="numero" onclick="adiciona_simbolo('2')">2</div>
         <div class="numero" onclick="adiciona_simbolo('3')">3</div>
@@ -30,7 +32,7 @@
   
         <div class="ponto" onclick="adiciona_simbolo('.')">.</div>
         <div class="limpar" onclick="limpar_formula()">C</div>
-        <div class="igual" onclick="calcular_formula()">=</div>
+        <div class="igual" id="igual" onclick="calcular_formula()">=</div>
       </main>
       <div class="historico">
           <h2>Histórico</h2>
@@ -38,6 +40,17 @@
       </div>
 
     </div>
+    <script>
+
+var input = document.getElementById("tela");
+
+input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("igual").click();
+    }
+}); 
+    </script>
 </body>
 </html>
 
